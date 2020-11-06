@@ -9,3 +9,7 @@ build:
 
 package-install:
 	pip install --user dist/*.whl
+
+make lint:
+	poetry run flake8 brain_games
+
