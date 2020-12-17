@@ -3,6 +3,7 @@
 
 import prompt
 from random import randint
+from random import choice
 
 
 def welcome_user():
@@ -16,13 +17,13 @@ def question(name):
     """Check for correct answer"""
     counter = 0
     for i in range(0, 3):
-        num = randint(0, 100)
-        if num % 2 == 0:
-            right_answer = 'yes'
-        else:
-            right_answer = 'no'
-        print('Question: ' + str(num))
-        answer = prompt.string('Your answer: ')
+        first_num = randint(0, 100)
+        second_num = randint(0, 100)
+        operator = choice(['+', '-', '*'])
+        expression = f'{first_num} {operator} {second_num}'
+        right_answer = eval(expression)
+        print('Question: ' + expression)
+        answer = int(prompt.string('Your answer: '))
         if answer == right_answer:
             counter += 1
             print('Correct!')
@@ -39,7 +40,7 @@ def main():
     """Main program"""
     print('Welcome to the Brain Games!')
     name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
     question(name)
 
 
