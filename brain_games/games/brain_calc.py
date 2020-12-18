@@ -31,8 +31,8 @@ def question(name):
                 print(f'Congratulations, {name}!')
                 continue
         else:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{right_answer}"')
-            print(f"Let's try again, {name}")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.")
+            print(f"Let's try again, {name}!")
             break
 
 
