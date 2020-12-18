@@ -1,5 +1,5 @@
 
-"""Brain-even main program."""
+"""Brain-progression main program."""
 
 import prompt
 from random import randint
