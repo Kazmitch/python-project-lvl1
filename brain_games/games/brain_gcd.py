@@ -19,7 +19,7 @@ def question(name):
         first_num = randint(0, 100)
         second_num = randint(0, 100)
         expression = f'{first_num} {second_num}'
-        print('Question: ' + expression)
+        print(f'Question: {expression}')
         answer = int(prompt.string('Your answer: '))
 
         while first_num != 0 and second_num != 0:

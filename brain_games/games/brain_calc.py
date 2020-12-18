@@ -22,7 +22,7 @@ def question(name):
         operator = choice(['+', '-', '*'])
         expression = f'{first_num} {operator} {second_num}'
         right_answer = eval(expression)
-        print('Question: ' + expression)
+        print(f'Question: {expression}')
         answer = int(prompt.string('Your answer: '))
         if answer == right_answer:
             counter += 1

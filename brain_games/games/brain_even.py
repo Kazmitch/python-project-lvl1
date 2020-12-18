@@ -21,7 +21,7 @@ def question(name):
             right_answer = 'yes'
         else:
             right_answer = 'no'
-        print('Question: ' + str(num))
+        print(f'Question: {num}')
         answer = prompt.string('Your answer: ')
         if answer == right_answer:
             counter += 1
