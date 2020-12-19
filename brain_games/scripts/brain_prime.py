@@ -3,6 +3,7 @@
 
 import prompt
 from random import randint
+# from math import sqrt
 
 
 def welcome_user():
@@ -16,18 +17,20 @@ def question(name):
     """Check for correct answer"""
     counter = 0
     for i in range(0, 3):
-        n = randint(0, 100)
+        n = randint(0, 2)
         print(f'Question: {n}')
         answer = prompt.string('Your answer: ')
 
-        d = 2
-        while n % d != 0:
-            d += 1
-
-        if d == n:
-            right_answer = 'yes'
-        else:
+        if n == 1:
             right_answer = 'no'
+        else:
+            d = 2
+            while n % d != 0:
+                d += 1
+            if d == n:
+                right_answer = 'yes'
+            else:
+                right_answer = 'no'
 
         if answer == right_answer:
             counter += 1
