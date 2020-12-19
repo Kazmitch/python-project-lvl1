@@ -17,7 +17,7 @@ def question(name):
     """Check for correct answer"""
     counter = 0
     for i in range(0, 3):
-        n = randint(0, 2)
+        n = randint(0, 100)
         print(f'Question: {n}')
         answer = prompt.string('Your answer: ')
 
